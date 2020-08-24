@@ -1,0 +1,11 @@
+200 	6000	ld V0, $0
+202 	6101	ld V1, $1
+204 	621e	ld V2, $30
+206 	630e	ld V3, $14
+208 	6400	ld V4, $0
+20a 	f029	ldspr V0
+20c 	e3a1	sknp V3
+20e 	f129	ldspr V1
+210 	00e0	cls
+212 	d235	drw V2, V3, 5
+214 	120a	jp 20a

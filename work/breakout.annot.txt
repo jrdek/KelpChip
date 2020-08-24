@@ -1,0 +1,141 @@
+Size: 140
+200: ld Ve, $0x05
+202: ld V5, $0x00
+204: ld Vb, $0x06
+206: ld Va, $0x00
+208: ld I, 30c
+20a: drw Va, Vb, $0x1
+20c: add Va, $0x04
+20e: se Va, $0x40
+210: jp 0x208
+212: add Vb, $0x02
+214: se Vb, $0x12
+216: jp 0x206
+218: ld Vc, $0x20
+21a: ld Vd, $0x1f
+21c: ld I, 310
+21e: drw Vc, Vd, $0x1
+220: call 0x2f6
+222: ld V0, $0x00
+224: ld V1, $0x00
+226: ld I, 312
+228: drw V0, V1, $0x1
+22a: add V0, $0x08
+22c: ld I, 30e
+22e: drw V0, V1, $0x1
+230: ld V0, $0x40
+232: ld DT, V0
+234: ld V0, DT
+236: se V0, $0x00
+238: jp 0x234
+23a: rnd V6, $0x0f
+23c: ld V7, $0x1e
+23e: ld V8, $0x01
+240: ld V9, $0xff
+242: ld I, 30e
+244: drw V6, V7, $0x1
+246: ld I, 310
+248: drw Vc, Vd, $0x1
+24a: ld V0, $0x04
+24c: sknp V0
+24e: add Vc, $0xfe
+250: ld V0, $0x06
+252: sknp V0
+254: add Vc, $0x02
+256: ld V0, $0x3f
+258: and Vc, V0
+25a: drw Vc, Vd, $0x1
+25c: ld I, 30e
+25e: drw V6, V7, $0x1
+260: add V6, V8
+262: add V7, V9
+264: ld V0, $0x3f
+266: and V6, V0
+268: ld V1, $0x1f
+26a: and V7, V1
+26c: sne V7, $0x1f
+26e: jp 0x2ac
+270: sne V6, $0x00
+272: ld V8, $0x01
+274: sne V6, $0x3f
+276: ld V8, $0xff
+278: sne V7, $0x00
+27a: ld V9, $0x01
+27c: drw V6, V7, $0x1
+27e: se Vf, $0x01
+280: jp 0x2aa
+282: sne V7, $0x1f
+284: jp 0x2aa
+286: ld V0, $0x05
+288: sub V0, V7
+28a: se Vf, $0x00
+28c: jp 0x2aa
+28e: ld V0, $0x01
+290: ld ST, V0
+292: ld V0, V6
+294: ld V1, $0xfc
+296: and V0, V1
+298: ld I, 30c
+29a: drw V0, V7, $0x1
+29c: ld V0, $0xfe
+29e: xor V9, V0
+2a0: call 0x2f6
+2a2: add V5, $0x01
+2a4: call 0x2f6
+2a6: sne V5, $0x60
+2a8: jp 0x2de
+2aa: jp 0x246
+2ac: ld V9, $0xff
+2ae: ld V0, V6
+2b0: sub V0, Vc
+2b2: se Vf, $0x01
+2b4: jp 0x2ca
+2b6: ld V1, $0x02
+2b8: sub V0, V1
+2ba: se Vf, $0x01
+2bc: jp 0x2e0
+2be: sub V0, V1
+2c0: se Vf, $0x01
+2c2: jp 0x2ee
+2c4: sub V0, V1
+2c6: se Vf, $0x01
+2c8: jp 0x2e8
+2ca: ld V0, $0x20
+2cc: ld ST, V0
+2ce: ld I, 30e
+2d0: add Ve, $0xff
+2d2: ld V0, Ve
+2d4: add V0, V0
+2d6: ld V1, $0x00
+2d8: drw V0, V1, $0x1
+2da: se Ve, $0x00
+2dc: jp 0x230
+2de: jp 0x2de
+2e0: add V8, $0xff
+2e2: sne V8, $0xfe
+2e4: ld V8, $0xff
+2e6: jp 0x2ee
+2e8: add V8, $0x01
+2ea: sne V8, $0x02
+2ec: ld V8, $0x01
+2ee: ld V0, $0x04
+2f0: ld ST, V0
+2f2: ld V9, $0xff
+2f4: jp 0x270
+2f6: ld I, 314
+2f8: ldbcd V5
+2fa: ldtil V2, [I]
+2fc: ldspr V1
+2fe: ld V3, $0x37
+300: ld V4, $0x00
+302: drw V3, V4, $0x5
+304: add V3, $0x05
+306: ldspr V2
+308: drw V3, V4, $0x5
+30a: ret
+30c: 
+30e: ld V0, V0
+310: 
+312: ld I, a00
+314: sys 000
+316: sys 000

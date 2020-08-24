@@ -1,0 +1,442 @@
+Size: 441
+200: cls
+202: ld V4, $0x00
+204: ld V5, $0x00
+206: ld I, 20a
+208: jp 0x20c
+20a: rnd Vc, $0x33
+20c: ld V6, $0x1e
+20e: drw V4, V5, $0x2
+210: drw V4, V6, $0x2
+212: add V4, $0x08
+214: sne V4, $0x40
+216: jp 0x21a
+218: jp 0x20e
+21a: ld I, 21e
+21c: jp 0x22c
+21e: 
+220: rnd V0, $0xc0
+222: rnd V0, $0xc0
+224: rnd V0, $0xc0
+226: rnd V0, $0xc0
+228: rnd V0, $0xc0
+22a: 
+22c: ld V4, $0x0d
+22e: ld V5, $0x09
+230: drw V4, V5, $0xe
+232: add V4, $0x0a
+234: ld I, 23a
+236: drw V4, V5, $0xe
+238: jp 0x248
+23a: 
+23c: rnd V3, $0xc3
+23e: rnd V3, $0xc3
+240: rnd V3, $0xff
+242: 
+244: rnd V3, $0xc3
+246: rnd V3, $0xc3
+248: add V4, $0x0a
+24a: ld I, 250
+24c: drw V4, V5, $0xe
+24e: jp 0x25e
+250: rnd V3, $0xc3
+252: rnd V3, $0xc3
+254: rnd V3, $0x66
+256: ld V6, $0x66
+258: ld V6, $0x66
+25a: se Vc, $0x3c
+25c: jp 0x818
+25e: add V4, $0x0a
+260: ld I, 266
+262: drw V4, V5, $0xe
+264: jp 0x274
+266: 
+268: rnd V0, $0xc0
+26a: rnd V0, $0xc0
+26c: 
+26e: rnd V0, $0xc0
+270: rnd V0, $0xc0
+272: 
+274: ld Va, $0x01
+276: ld Vb, $0x04
+278: ld Vc, $0x0e
+27a: ld Vd, $0x00
+27c: ld I, 281
+27e: jp 0x2a6
+280: 
+282: 
+284: 
+286: 
+288: 
+28a: cls
+28c: ld V4, $0x00
+28e: ld V5, $0x00
+290: drw V4, V5, $0x8
+292: add V4, $0x08
+294: sne V4, $0x40
+296: call 0x29e
+298: sne V5, $0x20
+29a: jp 0x2a4
+29c: jp 0x290
+29e: ld V4, $0x00
+2a0: add V5, $0x08
+2a2: ret
+2a4: jp 0x2ae
+2a6: ld V0, $0x0f
+2a8: skp V0
+2aa: jp 0x2a8
+2ac: jp 0x28a
+2ae: sne Va, $0x01
+2b0: call 0x2d0
+2b2: sne Va, $0x02
+2b4: call 0x38a
+2b6: sne Va, $0x03
+2b8: call 0x3b8
+2ba: sne Va, $0x04
+2bc: call 0x3e0
+2be: sne Va, $0x05
+2c0: call 0x418
+2c2: sne Va, $0x06
+2c4: call 0x478
+2c6: sne Va, $0x07
+2c8: call 0x4e6
+2ca: sne Va, $0x08
+2cc: call 0x510
+2ce: jp 0x318
+2d0: ld I, 281
+2d2: ld V4, $0x02
+2d4: ld V5, $0x02
+2d6: drw V4, V5, $0x8
+2d8: ld V5, $0x0a
+2da: drw V4, V5, $0x8
+2dc: ld V5, $0x12
+2de: drw V4, V5, $0x8
+2e0: ld V4, $0x0a
+2e2: ld V5, $0x05
+2e4: drw V4, V5, $0x3
+2e6: ld V4, $0x12
+2e8: drw V4, V5, $0x3
+2ea: ld V4, $0x1a
+2ec: drw V4, V5, $0x3
+2ee: ld V4, $0x22
+2f0: drw V4, V5, $0x3
+2f2: ld V4, $0x2a
+2f4: drw V4, V5, $0x3
+2f6: ld V4, $0x32
+2f8: drw V4, V5, $0x3
+2fa: ld I, 2fe
+2fc: jp 0x30a
+2fe: 
+300: 
+302: 
+304: 
+306: 
+308: 
+30a: add V5, $0x03
+30c: add V4, $0x02
+30e: drw V4, V5, $0xc
+310: add V4, $0x06
+312: add V5, $0x09
+314: drw V4, V5, $0x3
+316: ret
+318: ld I, 280
+31a: drw Vb, Vc, $0x1
+31c: sne Vf, $0x01
+31e: jp 0x372
+320: ld V0, $0x02
+322: sknp V0
+324: ld Vd, $0x02
+326: ld V0, $0x04
+328: sknp V0
+32a: ld Vd, $0x04
+32c: ld V0, $0x06
+32e: sknp V0
+330: ld Vd, $0x06
+332: ld V0, $0x08
+334: sknp V0
+336: ld Vd, $0x08
+338: drw Vb, Vc, $0x1
+33a: sne Vd, $0x02
+33c: add Vc, $0xff
+33e: sne Vd, $0x04
+340: add Vb, $0xff
+342: sne Vd, $0x06
+344: add Vb, $0x01
+346: sne Vd, $0x08
+348: add Vc, $0x01
+34a: sne Vb, $0x40
+34c: jp 0x35e
+34e: sne Vb, $0xff
+350: jp 0x364
+352: ld V0, $0x02
+354: ld DT, V0
+356: ld V0, DT
+358: se V0, $0x00
+35a: jp 0x356
+35c: jp 0x318
+35e: add Va, $0x01
+360: sne Va, $0x09
+362: jp 0x53a
+364: ld Vb, $0x01
+366: ld I, 281
+368: jp 0x28a
+36a: add Va, $0xff
+36c: ld Vb, $0x3e
+36e: ld I, 281
+370: jp 0x28a
+372: ld V0, $0x03
+374: ld ST, V0
+376: ld V0, $0x0f
+378: skp V0
+37a: jp 0x378
+37c: ld Va, $0x01
+37e: ld Vb, $0x04
+380: ld Vc, $0x0e
+382: ld Vd, $0x00
+384: ld I, 281
+386: cls
+388: jp 0x28a
+38a: ld V4, $0x00
+38c: ld V5, $0x11
+38e: ld I, 281
+390: drw V4, V5, $0x3
+392: add V4, $0x08
+394: drw V4, V5, $0x3
+396: add V4, $0x08
+398: add V5, $0xff
+39a: drw V4, V5, $0x3
+39c: add V4, $0x08
+39e: add V5, $0xff
+3a0: drw V4, V5, $0x3
+3a2: add V4, $0x08
+3a4: drw V4, V5, $0x3
+3a6: add V4, $0x08
+3a8: drw V4, V5, $0x3
+3aa: add V4, $0x08
+3ac: add V5, $0x01
+3ae: drw V4, V5, $0x3
+3b0: add V4, $0x08
+3b2: add V5, $0x01
+3b4: drw V4, V5, $0x3
+3b6: ret
+3b8: ld V4, $0x00
+3ba: ld V5, $0x11
+3bc: ld I, 281
+3be: drw V4, V5, $0x3
+3c0: add V4, $0x08
+3c2: drw V4, V5, $0x3
+3c4: add V4, $0x08
+3c6: add V5, $0x02
+3c8: drw V4, V5, $0x2
+3ca: add V4, $0x08
+3cc: drw V4, V5, $0x1
+3ce: add V4, $0x08
+3d0: drw V4, V5, $0x1
+3d2: add V4, $0x08
+3d4: drw V4, V5, $0x1
+3d6: add V4, $0x08
+3d8: drw V4, V5, $0x1
+3da: add V4, $0x08
+3dc: drw V4, V5, $0x1
+3de: ret
+3e0: ld V4, $0x00
+3e2: ld V5, $0x13
+3e4: ld I, 281
+3e6: drw V4, V5, $0x1
+3e8: ld I, 280
+3ea: add V4, $0x08
+3ec: drw V4, V5, $0x1
+3ee: add V5, $0x01
+3f0: drw V4, V5, $0x1
+3f2: add V5, $0x01
+3f4: ld I, 281
+3f6: drw V4, V5, $0x1
+3f8: add V4, $0x08
+3fa: drw V4, V5, $0x1
+3fc: add V4, $0x08
+3fe: drw V4, V5, $0x2
+400: add V4, $0x08
+402: add V5, $0xff
+404: drw V4, V5, $0x3
+406: add V4, $0x08
+408: drw V4, V5, $0x4
+40a: add V4, $0x08
+40c: add V5, $0xff
+40e: drw V4, V5, $0x6
+410: add V4, $0x08
+412: add V5, $0xff
+414: drw V4, V5, $0x8
+416: ret
+418: ld V4, $0x00
+41a: ld V5, $0x12
+41c: ld I, 281
+41e: drw V4, V5, $0x8
+420: add V4, $0x08
+422: drw V4, V5, $0x8
+424: add V4, $0x08
+426: drw V4, V5, $0x8
+428: add V4, $0x08
+42a: drw V4, V5, $0x8
+42c: add V4, $0x08
+42e: drw V4, V5, $0x8
+430: add V4, $0x08
+432: drw V4, V5, $0x8
+434: add V4, $0x08
+436: drw V4, V5, $0x8
+438: ld I, 280
+43a: add V5, $0xff
+43c: add V4, $0x20
+43e: drw V4, V5, $0x1
+440: add V5, $0xff
+442: drw V4, V5, $0x1
+444: add V5, $0xff
+446: drw V4, V5, $0x1
+448: add V5, $0xff
+44a: drw V4, V5, $0x1
+44c: add V5, $0xff
+44e: drw V4, V5, $0x1
+450: add V5, $0xff
+452: drw V4, V5, $0x1
+454: add V5, $0xff
+456: drw V4, V5, $0x1
+458: add V5, $0xff
+45a: drw V4, V5, $0x1
+45c: add V5, $0xff
+45e: ld I, 281
+460: drw V4, V5, $0x1
+462: add V4, $0x08
+464: drw V4, V5, $0x1
+466: add V4, $0x08
+468: drw V4, V5, $0x1
+46a: add V4, $0x08
+46c: drw V4, V5, $0x1
+46e: add V4, $0x08
+470: drw V4, V5, $0x1
+472: add V4, $0x08
+474: drw V4, V5, $0x1
+476: ret
+478: ld V4, $0x00
+47a: ld V5, $0x09
+47c: ld I, 281
+47e: drw V4, V5, $0x1
+480: add V4, $0x08
+482: drw V4, V5, $0x1
+484: add V4, $0x08
+486: drw V4, V5, $0x1
+488: add V4, $0x08
+48a: drw V4, V5, $0x1
+48c: add V4, $0x08
+48e: drw V4, V5, $0x1
+490: add V4, $0x08
+492: drw V4, V5, $0x1
+494: ld I, 280
+496: add V5, $0x01
+498: drw V4, V5, $0x1
+49a: add V5, $0x01
+49c: drw V4, V5, $0x1
+49e: add V5, $0x01
+4a0: drw V4, V5, $0x1
+4a2: add V5, $0x01
+4a4: drw V4, V5, $0x1
+4a6: add V5, $0x01
+4a8: drw V4, V5, $0x1
+4aa: add V5, $0x01
+4ac: drw V4, V5, $0x1
+4ae: add V5, $0x01
+4b0: drw V4, V5, $0x1
+4b2: add V5, $0x01
+4b4: drw V4, V5, $0x1
+4b6: add V5, $0x01
+4b8: drw V4, V5, $0x1
+4ba: add V5, $0x01
+4bc: drw V4, V5, $0x1
+4be: add V5, $0x01
+4c0: drw V4, V5, $0x1
+4c2: add V5, $0x01
+4c4: drw V4, V5, $0x1
+4c6: add V5, $0x01
+4c8: drw V4, V5, $0x1
+4ca: add V5, $0x01
+4cc: drw V4, V5, $0x1
+4ce: add V5, $0x01
+4d0: drw V4, V5, $0x1
+4d2: add V5, $0x01
+4d4: drw V4, V5, $0x1
+4d6: add V5, $0x01
+4d8: ld I, 281
+4da: drw V4, V5, $0x1
+4dc: add V4, $0x08
+4de: drw V4, V5, $0x1
+4e0: add V4, $0x08
+4e2: drw V4, V5, $0x1
+4e4: ret
+4e6: ld V4, $0x00
+4e8: ld V5, $0x1a
+4ea: ld I, 281
+4ec: drw V4, V5, $0x1
+4ee: add V4, $0x08
+4f0: drw V4, V5, $0x1
+4f2: add V4, $0x08
+4f4: drw V4, V5, $0x1
+4f6: add V4, $0x08
+4f8: drw V4, V5, $0x1
+4fa: add V4, $0x08
+4fc: drw V4, V5, $0x1
+4fe: add V5, $0xff
+500: drw V4, V5, $0x1
+502: add V4, $0x08
+504: drw V4, V5, $0x1
+506: add V4, $0x08
+508: drw V4, V5, $0x1
+50a: add V4, $0x08
+50c: drw V4, V5, $0x1
+50e: ret
+510: ld V4, $0x00
+512: ld V5, $0x19
+514: ld I, 281
+516: drw V4, V5, $0x1
+518: add V4, $0x08
+51a: drw V4, V5, $0x1
+51c: add V4, $0x08
+51e: drw V4, V5, $0x1
+520: add V4, $0x08
+522: drw V4, V5, $0x1
+524: add V4, $0x08
+526: drw V4, V5, $0x1
+528: add V5, $0xff
+52a: drw V4, V5, $0x1
+52c: add V4, $0x08
+52e: drw V4, V5, $0x1
+530: add V4, $0x08
+532: drw V4, V5, $0x1
+534: add V4, $0x08
+536: drw V4, V5, $0x1
+538: ret
+53a: cls
+53c: ld V7, $0x03
+53e: ld V8, $0x03
+540: ld I, 544
+542: jp 0x55c
+544: ld I, eaa
+546: sknp Va
+548: sne Ve, $0x00
+54a: ld I, 4a4
+54c: ld I, 4a5
+54e: sknp V2
+550: se Vd, V5
+552: se V5, V5
+554: sne Vd, V0
+556: rnd V8, $0x48
+558: sne V8, $0x40
+55a: sne V8, $0x00
+55c: drw V7, V8, $0x5
+55e: ld I, 54a
+560: add V7, $0x08
+562: drw V7, V8, $0x5
+564: add V7, $0x08
+566: ld I, 550
+568: drw V7, V8, $0x5
+56a: add V7, $0x08
+56c: ld I, 556
+56e: drw V7, V8, $0x5
+570: jp 0x570

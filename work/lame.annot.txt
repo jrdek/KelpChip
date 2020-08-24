@@ -1,0 +1,7 @@
+200		6000	ld v0, 00
+202		611e	ld v1, 1e
+204		620e	ld v2, 0e
+206		f029	ldspr v0
+208		d125	drw v1, v2, 5
+20a		a20e	ldi 20e
+20c		1208	jmp 208
